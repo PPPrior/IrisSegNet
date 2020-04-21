@@ -5,7 +5,7 @@ from .fcn import FCN, FCNHead, SkipArch
 __all__ = ['fcn_vgg16', 'fcn_vgg19']
 
 
-def _segm_resnet(backbone_name, num_classes, arch, pretrained_backbone=False):
+def _segm_fcn(backbone_name, num_classes, arch, pretrained_backbone=False):
     backbone = vgg.__dict__[backbone_name](
         pretrained=pretrained_backbone)
 
@@ -36,11 +36,11 @@ def fcn_vgg16(num_classes=1, arch_type=None, **kwargs):
     '''
         Constructs a Fully-Convolutional Network model with a Vgg19 backbone.
     '''
-    return _segm_resnet('vgg16', num_classes, arch_type, **kwargs)
+    return _segm_fcn('vgg16', num_classes, arch_type, **kwargs)
 
 
 def fcn_vgg19(num_classes=1, arch_type=None, **kwargs):
     '''
         Constructs a Fully-Convolutional Network model with a Vgg19 backbone.
     '''
-    return _segm_resnet('vgg19', num_classes, arch_type, **kwargs)
+    return _segm_fcn('vgg19', num_classes, arch_type, **kwargs)

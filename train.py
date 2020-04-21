@@ -118,7 +118,7 @@ if __name__ == '__main__':
     # fit(model, device, path, lr=0.00005, epochs=5, batch_size=4)
     # torch.save(model.state_dict(), './model_v2.pth')
 
-    id = '001-R-01'
+    id = '009-R-30'
     image = 'C:/Users/Prior-Laptop/Desktop/data/image/' + id + '.png'
     mask = 'C:/Users/Prior-Laptop/Desktop/data/mask/' + id + '.png'
     image, mask = roi(image, mask)
